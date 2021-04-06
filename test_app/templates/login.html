@@ -1,0 +1,37 @@
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+</head>
+<body>
+    <section>
+        <h3>이메일 로그인</h3>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <fieldset>
+                <label>
+                    이메일
+                    <input type="email" name="email"/>
+                </label><br/><br/>
+                <label>
+                    비밀번호
+                    <input type="password" name="password"/>
+                </label><br/><br/>
+                <input type="hidden" name="next" value="{{ next }}"/>
+                <button type="submit">로그인</button>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <h3>소셜 로그인</h3>
+        <fieldset>
+            <a href="{% provider_login_url 'facebook' %}">페이스북 로그인</a><br/><br/>
+            <a href="{% provider_login_url 'naver' %}">네이버 로그인</a><br/><br/>
+            <a href="{% provider_login_url 'kakao' %}">카카오 로그인</a>
+        </fieldset>
+    </section>
+</body>
+</html>

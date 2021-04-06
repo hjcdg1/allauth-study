@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>홈</title>
+</head>
+<body>
+    {% if request.user.is_authenticated %}
+        <h3>로그인 됨</h3>
+        <a href="{% url 'logout' %}">로그아웃</a>
+    {% else %}
+        <h3>로그인 안 됨</h3>
+        <a href="{% url 'login' %}">로그인</a><br/>
+        <a href="{% url 'signup' %}">회원가입</a>
+    {% endif %}
+</body>
+</html>
