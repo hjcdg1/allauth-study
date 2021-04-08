@@ -29,9 +29,18 @@
         <h3>소셜 로그인</h3>
         <fieldset>
             <a href="{% provider_login_url 'facebook' %}">페이스북 로그인</a><br/><br/>
-            <a href="{% provider_login_url 'naver' %}">네이버 로그인</a><br/><br/>
-            <a href="{% provider_login_url 'kakao' %}">카카오 로그인</a>
+            <a href="{% provider_login_url 'kakao' %}">카카오 로그인</a><br/><br/>
+            <a href="{% provider_login_url 'naver' %}">네이버 로그인</a>
         </fieldset>
     </section>
+    <script>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == 'error' %}
+                    alert('{{ message }}');
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </script>
 </body>
 </html>
