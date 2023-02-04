@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'allauth_study.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'allauth-study.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

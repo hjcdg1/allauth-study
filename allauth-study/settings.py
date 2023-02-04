@@ -18,7 +18,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
-ROOT_URLCONF = 'allauth_study.urls'
+ROOT_URLCONF = 'allauth-study.urls'
 
 TEMPLATES = [
     {
@@ -36,7 +36,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'allauth_study.wsgi.application'
+WSGI_APPLICATION = 'allauth-study.wsgi.application'
 
 DATABASES = {
     'default': {

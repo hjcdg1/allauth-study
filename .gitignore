@@ -1,6 +1,6 @@
 env
 db.sqlite3
 .idea
-allauth_study/__pycache__
+allauth-study/__pycache__
 test_app/__pycache__
 test_app/migrations/__pycache__
